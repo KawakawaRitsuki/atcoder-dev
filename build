@@ -1,0 +1,9 @@
+clear
+while true
+do
+  inotifywait -q main.js
+  clear
+  babel main.js --out-file output.js
+  cat output.js
+  cat output.js | xsel --clipboard --input
+done

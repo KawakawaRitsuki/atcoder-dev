@@ -1,0 +1,2 @@
+clear
+npx node-dev --respawn main.js

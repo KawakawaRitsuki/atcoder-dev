@@ -1,0 +1,9 @@
+clear
+mkdir -p archives
+while true
+do
+  read -p "name: " a
+  cp main.js archives/$a.js
+  cp output.js archives/$a.node5.js
+done
+
