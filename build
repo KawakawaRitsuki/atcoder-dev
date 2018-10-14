@@ -3,7 +3,7 @@ while true
 do
   inotifywait -q main.js
   clear
-  sed -e '/^$/d' main.js | sed '$d' | sed -e '$ a common(require("fs").readFileSync("/dev/stdin", "utf8"));' > tmp.js
+  sed -e '/^$/d' main.js | sed '/^common(/d' | sed -e '$ a common(require("fs").readFileSync("/dev/stdin", "utf8"));' > tmp.js
   babel tmp.js --out-file output.js
   babel main.js --out-file runnable.js
   rm tmp.js
