@@ -1,2 +1,9 @@
 clear
-npx node-dev --respawn main.js
+cd test_dir
+while true
+do
+  inotifywait -q ../runnable.js
+  clear
+  cp ../runnable.js .
+  node runnable.js
+done

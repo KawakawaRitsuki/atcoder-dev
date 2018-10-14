@@ -3,7 +3,6 @@
 ## About
 
 なんかパパっとAtCoderをnodeでするやつ   
-そんなに深く考えて作ってない   
 
 ## How to use
 
@@ -19,7 +18,8 @@
 ## Description
 
 ### ./watch
-node-devで監視してるだけです
+babelの結果を監視してnode5で実行します。   
+無限ループすると更新されなくなるので一度落としてください。   
 
 ### ./build
 ファイルの変更を検知してmain.jsからoutput.jsにビルドしています。
@@ -33,3 +33,5 @@ node-devで監視してるだけです
 - inotify-tools
 - xsel
 - node 10
+- node 5.12
+- ndenv
